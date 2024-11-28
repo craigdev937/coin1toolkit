@@ -1,6 +1,4 @@
 import React from "react";
-// import { createBrowserRouter, 
-//     RouterProvider } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
@@ -13,6 +11,7 @@ export const Main = () => {
             <React.Fragment>
                 <Navbar />
                 <Routes>
+                    <Route path="*" element={<NotFound />} />
                     <Route path="/" element={<Coins />} />
                     <Route path="/coin/:id" element={<Details />} />
                 </Routes>

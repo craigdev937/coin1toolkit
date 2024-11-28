@@ -3,9 +3,9 @@
 :root {
     --white: hsl(0, 0%, 100%);
     --gray: hsl(210, 13%, 50%);
-    --kelly: #002834;
-    --blue: #0b004e;
-    --charm: #1d152f;
+    --purple: hsl(263, 100%, 58%);
+    --blue: hsl(248, 100%, 15%);
+    --charm: hsl(258, 38%, 13%);
 }
 
 *, *::before, *::after {
