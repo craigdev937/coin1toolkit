@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(210, 13%, 50%);
+    --kelly: #002834;
+    --blue: #0b004e;
+    --charm: #1d152f;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--white);
+    background: linear-gradient(var(--charm), var(--blue), var(--gray));
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+

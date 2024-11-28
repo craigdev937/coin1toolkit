@@ -1,0 +1,50 @@
+.coin {
+    padding: 0px 10px;
+    padding-bottom: 100px;
+}
+
+.coin__hero {
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.coin__hero h1 {
+    font-size: max(4vw, 36px);
+}
+
+.coin__hero p {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+}
+
+.coin__hero form {
+    padding: 8px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.coin__hero input {
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+
+
+
+
+
