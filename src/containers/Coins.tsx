@@ -16,7 +16,6 @@ export const Coins = () => {
         }
     };
 
-
     return (
         <React.Fragment>
             {isLoading ? (
@@ -53,7 +52,11 @@ export const Coins = () => {
                                     <p>{coin.name + " - " + coin.symbol}</p>
                                 </div>
                                 <p>$ {coin.current_price.toLocaleString()}</p>
-                                <p>{Math.floor(coin.price_change_percentage_24h)/100}</p>
+                                <p className={
+                                    coin.price_change_percentage_24h > 0 ? "green" : "red"
+                                }>
+                                    {Math.floor(coin.price_change_percentage_24h*100)/100}
+                                </p>
                                 <p className="market__cap">$ {coin.market_cap.toLocaleString()}</p>
                             </aside>
                         ))}

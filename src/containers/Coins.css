@@ -93,4 +93,14 @@
     width: 35px;
 }
 
+.table__layout .green {
+    color: #00D515;
+    text-align: center;
+}
+
+.table__layout .red {
+    color: #ff4646;
+    text-align: center;
+}
+
 
