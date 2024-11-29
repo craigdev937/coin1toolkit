@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import type { ICoin, IPage } from "../models/Interfaces";
+import type { ICoin, IPage, IDetail } from "../models/Interfaces";
 const URL = "https://api.coingecko.com/api/v3";
 const PAGE = "/coins/markets?vs_currency=usd&per_page";
 const API = process.env.x_cg_demo_api_key;
@@ -20,7 +20,7 @@ export const GeckoAPI = createApi({
             }),
             providesTags: ["Coins"]
         }),
-        one: builder.query<ICoin, string>({
+        one: builder.query<IDetail, string>({
             query: (coinId) => ({
                 url: `/coins/${coinId}`,
                 method: "GET",

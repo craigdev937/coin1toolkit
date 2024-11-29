@@ -36,5 +36,31 @@ export interface ICoin {
     last_updated: string
 };
 
+export interface IDetail {
+    id: string,
+    symbol: string,
+    name: string,
+    web_slug: string,
+    categories: string[],
+    preview_listing: boolean,
+    description: {
+        en: string
+    },
+    links: {
+        homepage: string[]
+    },
+    blockchain_site: string[],
+    image: {
+        thumb: string,
+        small: string,
+        large: string
+    },
+    market_data: {
+        current_price: {
+            usd: number
+        }
+    }
+};
+
 
 

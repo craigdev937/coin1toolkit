@@ -7,14 +7,35 @@ export const Details = () => {
     const params = useParams();
     const { id } = params;
     const coinID = id !== undefined ? String(id) : "";
-    const { data: coin } = GeckoAPI.useOneQuery(coinID);
+    const { error, isLoading, data: coin } = GeckoAPI.useOneQuery(coinID);
     console.log("single", coin);
 
+    if (error) {
+        if ("status" in error) {
+            const errMSG = "error" in error ?
+                error.error :
+                JSON.stringify(error.data);
+            return <h1>Error: {errMSG}</h1>;
+        } else {
+            return <h1>Error: {error.message}</h1>
+        }
+    };
+
     return (
-        <React.Fragment>
-            <h1>Details</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi beatae, quos eaque est ipsam reiciendis perferendis eius natus magni vel autem hic quasi voluptatibus unde pariatur. Dolorem aliquid quidem nisi.</p>
-        </React.Fragment>
+    <React.Fragment>
+        {isLoading ? (
+            <h1>Loading...</h1>
+        ) : (
+            <section className="coin">
+                <h1>BitCoin: {coin?.name}</h1>
+                <aside className="coin__name">
+                    <img src={coin?.image.large} alt={coin?.name} />
+                    <p><b>{coin?.name} ({coin?.symbol.toUpperCase()})</b></p>
+                    <p>{coin?.description.en}</p>
+                </aside>
+            </section>
+        )}
+    </React.Fragment>
     );
 };
 
