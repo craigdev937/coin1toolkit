@@ -4,6 +4,7 @@ import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Coins } from "../containers/Coins";
 import { Details } from "../containers/Details";
+import { Footer } from "../components/Footer";
 
 export const Main = () => {
     return (
@@ -15,6 +16,7 @@ export const Main = () => {
                     <Route path="/" element={<Coins />} />
                     <Route path="/coin/:id" element={<Details />} />
                 </Routes>
+                <Footer />
             </React.Fragment>
         </BrowserRouter>
     );

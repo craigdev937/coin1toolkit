@@ -103,4 +103,14 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .table__layout {
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    }
+
+    .market__cap {
+        display: none;
+    }
+}
+
 
