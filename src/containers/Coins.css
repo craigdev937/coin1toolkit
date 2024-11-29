@@ -113,4 +113,18 @@
     }
 }
 
+@media (max-width: 500px) {
+    .table__layout div {
+        width: 25px;
+    }
+
+    .table__layout {
+        font-size: 13px;
+    }
+
+    .coin__hero input {
+        width: 100px;
+    }
+}
+
 

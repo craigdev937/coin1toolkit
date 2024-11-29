@@ -1,7 +1,15 @@
 import React from "react";
 import "./Details.css";
+import { useParams } from "react-router-dom";
+import { GeckoAPI } from "../global/GeckoAPI";
 
 export const Details = () => {
+    const params = useParams();
+    const { id } = params;
+    const coinID = id !== undefined ? String(id) : "";
+    const { data: coin } = GeckoAPI.useOneQuery(coinID);
+    console.log("single", coin);
+
     return (
         <React.Fragment>
             <h1>Details</h1>

@@ -20,6 +20,17 @@ export const GeckoAPI = createApi({
             }),
             providesTags: ["Coins"]
         }),
+        one: builder.query<ICoin, string>({
+            query: (coinId) => ({
+                url: `/coins/${coinId}`,
+                method: "GET",
+                headers: {
+                    accept: "application/json", 
+                    "x-cg-demo-api-key": `${API}`
+                }
+            }),
+            providesTags: ["Coins"]
+        }),
         page: builder.mutation<ICoin[], IPage>({
             query: ({ page, perPage }: IPage) => ({
                 url: `${PAGE}=${perPage}&page=${page}`,
