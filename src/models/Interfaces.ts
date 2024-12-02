@@ -40,9 +40,7 @@ export interface IDetail {
     id: string,
     symbol: string,
     name: string,
-    web_slug: string,
     categories: string[],
-    preview_listing: boolean,
     description: {
         en: string
     },
@@ -58,9 +56,24 @@ export interface IDetail {
     market_data: {
         current_price: {
             usd: number
+        },
+        market_cap: {
+            usd: number
+        },
+        high_24h: {
+            usd: number
+        },
+        low_24h: {
+            usd: number
         }
-    }
+    },
+    market_cap_rank: number
 };
 
+export interface IGraph {
+    prices: [number[]],
+    market_caps: [number[]],
+    total_volumes: Array<number[]>
+};
 
 
